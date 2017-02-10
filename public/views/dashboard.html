@@ -1,0 +1,11 @@
+<div ng-controller="AdminCtrl" ng-if="auth()">
+	<h3>{{ user.harry }}'s Dashboard</h3>
+	<h3><a href="/admin/stats">Website Statistics</a></h3>
+	<h3><a href="/admin/server">Server Backdoor</a></h3>
+
+
+</div>
+<div class="error" ng-if="!auth()">
+	<h3 style="color: #CC342D">403</h3>
+	<h3 style="color: #CC342D">Забранен достъп!</h3>
+</div>

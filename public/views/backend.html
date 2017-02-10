@@ -1,0 +1,40 @@
+<div ng-controller="BackendCtrl">
+	<h2>Back-end & Programming</h2>
+
+	<div class="box">
+		<p>
+			As a backend developer I mainly work with <span style="color: #e7b500;">JS</span> serverside frameworks: <span style="color: #90C53F;">NodeJS</span>, <span style="color: #a3c0d6;">ExpressJS</span>, <span style="color: #C4473A;">AngularJS</span> and <span style="color: #967855;">MongoDB</span> for the database.
+		</p>
+		<p>
+			Prior to using JS I managed to compete in a competition with a complex calender web app built on <span style="color: #A22135;">Ruby on Rails</span>. <br>
+			I am also familiar with some <span style="color: #6C7EB7;">PHP</span> and <span style="color: #00A0D2;">Wordpress</span>.
+		</p>
+		<p>
+			Besides websites I have knowledge in <span style="color: #5E97D0;">C++</span>, <span style="color: #9B4F96;">C#</span>, <span style="color: #E76F00;">Java</span>, <span style="color: #CC342D;">Ruby</span>, <span style="color: #306897;">Python</span> and I always look forward to expanding my software development knowledge.
+		</p>
+	</div>
+	<h3>Backend Projects</h3>
+	<ul class="showcase row">
+		<li class="col-lg-6 col-md-6" ng-repeat="site in sites">
+			<a class="work" href="/preview/backend/{{ site.id }}" ng-click="openPreview()">
+				<div class="img-holder">
+					<img src="../images/{{ site.id }}/{{ site.id }}.jpg" alt="">
+					<h4><div>{{ site.name }}</div></h4>
+				</div>
+				<div class="url">{{ site.url }}</div>
+				<div class="date"><i class="fa fa-calendar"></i>{{ site.date }}</div>
+				<div class="tech" ng-bind-html="site.tech | to_trusted"></div>
+				<p class="job" ng-bind-html="site.job | to_trusted"></p>
+			</a>
+		</li>
+	</ul>
+
+	<div class="box last">
+		<p>
+			<img src="../images/weband.png" alt="">
+			If you want a website or a web app with great design, high quality code and big variety of functionalities, me and my friends from <a href="http://www.weband.bg" target="_blank" class="orange-color">WebAnD</a> will do it for you in no time!
+		</p>
+	</div>
+
+</div>
+<div class="under-construction"></div>

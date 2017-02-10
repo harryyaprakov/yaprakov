@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Yaprakov" ng-controller="MainController">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<base href="/">
+
+	<title>Yaprakov Portfolio</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="libs/bootstrap-grid/css/grid12.css">
+	<link rel="stylesheet" href="fonts/roboto/stylesheet.css">
+	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css">
+	<link rel="stylesheet" href="fonts/font-awesome/font-awesome.css"> <!-- fonts -->
+	<link rel="stylesheet" href="libs/bootswatch/paper/bootstrap.css" />
+	<!-- <link rel="stylesheet" href="libs/angular-filemanager/dist/angular-filemanager.min.css"> -->
+
+</head>
+<body>
+	<div id="particles-js"></div>
+	<h1>
+		<span>Software Developer, </span>
+		<span>Web Designer, </span>
+		<span>Creative thinker, </span>
+		<span>& Beer drinker</span> 
+		<div class="responsiveness">I am responsive <br> and so are my websites.</div>
+		<a class="hireme" href="/contact">Hire me</a>
+		<a class="hireme black">or</a>
+		<a class="hireme mywork" href="#" data-menu-trigger>See my work</a>
+	</h1>
+
+	<div class="wrapper">
+			<div class="left-panel">
+				<header>
+					<a href="/" class="harry" data-home-click><div>Hristiyan</div> <div>Yaprakov</div></a>
+					<a href="#" class="menu-trigger" data-menu-trigger><i class="fa fa-bars"></i></a>
+				</header>
+				<nav>
+					<ul class="left-menu">
+						<li><a href="/admin/home" class="orange-color" data-link-click ng-if="auth()">Dashboard</a></li>
+						<li><a href="/frontend" data-link-click>Front end</a></li>
+						<li><a href="/backend" data-link-click>Back end</a></li>
+						<li><a href="/design" data-link-click>Design</a></li>
+						<li><a href="/photography" data-link-click>Photography</a></li>
+						<li><a href="/about" data-link-click>About <span class="orange-color">harry</span></a></li>
+						<li><a href="/contact" data-link-click>Contact me</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="left-menu">
+						<li><a href="https://www.facebook.com/harryYaprakov" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+						<li><a href="https://github.com/harryyaprakov" target="_blank"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.instagram.com/harryyaprakov/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" ng-click="logout()" class="orange-color" ng-if="auth()"><i class="fa fa-sign-out"></i></a></li>
+					</ul>
+				</footer>
+			</div>
+			<div class="container content">
+
+				<div ng-view autoscroll="true"></div>
+			</div>
+			<div id="particles-bottom" ng-if="!auth()"></div>
+	</div>
+
+
+
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="libs/angular-resource/angular-resource.min.js"></script>
+	<script src="libs/ngStorage/ngStorage.min.js"></script>
+  	<script src="libs/angular-translate/angular-translate.min.js"></script>
+    <script src="libs/ng-file-upload/ng-file-upload.min.js"></script>
+
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+	
+	<script src="libs/jquery/jquery-3.1.0.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/particles.js/particles.js"></script>
+	<script src="libs/particles.js/app.js"></script>
+
+  	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="libs/angular-filemanager/dist/angular-filemanager.min.js"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>

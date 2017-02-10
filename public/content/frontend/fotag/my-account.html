@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOTAG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="fonts/open-sans/open-sans.css">
+	<link rel="stylesheet" href="fonts/font-awesome/font-awesome.css">
+	<link rel="stylesheet" href="fonts/centennial/centennial.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<header>
+		<div class="container clearfix">
+			<a href="#" class="main-logo">FOTAG</a>
+			<nav class="desktop-menu">
+				<ul class="main-menu">
+					<li><a href="agency-admins.html"><i class="icon"></i> My Agents</a></li>
+					<li><a href="index.html"><i class="icon"></i> My Listings</a></li>
+					<li><a href="my-learning-center.html"><i class="icon"></i> My Learning Center</a></li>
+				</ul>
+				<ul class="account-menu">
+					<li><a href="my-account.html" class="active"><i class="icon"></i> My Account</a></li>
+					<li>
+						<a href="#" class="logoff" onclick="return false;" data-dropdown-trigger><i class="icon"></i> Log off</a>
+						<ul class="dropdown">
+							<li><a href="#">Profile Settings</a></li>
+							<li><a href="#">Billing Information</a></li>
+							<li><a href="#">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="mobile-menu">
+				<a href="#" class="trigger" onclick="return false;" data-dropdown-trigger><i class="icon"></i></a>
+				<ul class="dropdown">
+					<li><a href="agency-admins.html"><i class="icon"></i> My Agents</a></li>
+					<li><a href="#"><i class="icon"></i> My Listings</a></li>
+					<li><a href="#"><i class="icon"></i> My Learning Center</a></li>
+					<li><a href="my-account.html" class="settings active"><i class="icon"></i> My Account</a></li>
+					<li><a href="#" class="logoff"><i class="icon"></i> Log off</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="content">
+		
+		<div class="container">
+			<div class="content-heading clearfix" >
+				<h1 class="col-lg-2 col-md-2 col-sm-2 col-xs-12">My account</h1>
+
+				<a href="index.html" class="btn gray">Go back</a>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 subscr fright">
+					<h3>Billing Information</h3>
+					<div class="rounded clearfix air-20-20">
+						<div class="clearfix">
+							<b>Billing plan</b>
+							<a href="#" class="fright small" data-open-modal="apply-discount-code">Apply discount code</a>
+							<div class="subscription row">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<div class="plan quarterly" data-toggle-subscription-plan="quarterly">
+										<h4>Quarterly</h4>
+										<div class="prise">$39.99</div>
+										<div class="due-date">Billed every 3 months</div>
+										<div class="active-ribbon"><span>active</span></div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<div class="plan yearly active" data-toggle-subscription-plan="yearly">
+										<h4>Yearly</h4>
+										<div class="prise">$129.99</div>
+										<div class="due-date">Billed once a year</div>
+										<div class="best-value"></div>
+										<div class="active-ribbon"><span>active</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="hint-info">Next billing cycle will happen at 09.22.2015 with $39.99 fee. <a href="#" class="tdu">Cancel subcription</a></p>	
+					</div>
+					<h3>Card Information</h3>
+					<div class="rounded clearfix air-20-20">
+						<div class="card-preview">
+							<img src="images/visa.png" alt="">
+							<span class="card-no">XXXX XXXX XXXX 1234</span>
+							<span class="exp-date">EXP. 01/16</span>
+							<a href="#" onclick="return false;" data-edit-card-info><i class="icon"></i> Edit card</a>
+						</div>
+						<div class="edit-card-info hidden">
+							<form action="">
+								<div class="input-holder clearfix">
+									<label for="card-no">Card Number:</label>
+									<input type="text" id="card-no" value="4123 4321 5345 1234">
+									<div class="tooltip">
+										<div class="tooltip-trigger">?</div>
+										<div class="tooltip-content">
+											Enter the name that is written on the front of the Debit or Credit Card
+										</div>
+									</div>
+								</div>
+								<div class="input-holder clearfix">
+									<label for="card-holder-name">Card Holde name:</label>
+									<input type="text" id="card-holder-name" value="Jessica Young">
+									<div class="tooltip">
+										<div class="tooltip-trigger">?</div>
+										<div class="tooltip-content">
+											Enter the name that is written on the front of the Debit or Credit Card
+										</div>
+									</div>
+								</div>
+								<div class="input-holder clearfix">
+									<label>Expiration date:</label>
+									<input class="very-small" type="text" id="exp-month" value="01">
+									<input class="very-small nomargin" type="text" id="exp-year" value="17">
+									<div class="tooltip">
+										<div class="tooltip-trigger">?</div>
+										<div class="tooltip-content">
+											Enter the name that is written on the front of the Debit or Credit Card
+										</div>
+									</div>
+								</div>
+								<div class="input-holder clearfix">
+									<label for="sec-code">Security code:</label>
+									<input class="small" type="text" id="sec-code" value="543">
+									<div class="tooltip">
+										<div class="tooltip-trigger">?</div>
+										<div class="tooltip-content">
+											Enter the name that is written on the front of the Debit or Credit Card
+										</div>
+									</div>
+								</div>
+								<div class="security clearfix">
+									<i class="icon"></i> <span>For your security, we never store credit card numbers. </span>
+								</div>
+								<input type="submit" class="btn orange" value="SAVE CARD" onclick="return false;" data-edit-card-info data-open-modal="card-save-success">
+							</form>
+						</div>
+					</div>
+					<h3>Billing Information - Free</h3>
+					<div class="rounded clearfix air-20-20 gray">
+						<b>Billing plan</b>
+						<div class="free-billing-plan">
+							<img src="images/remax-logo.png" alt="">
+							<p>Account invoices paid by</p>
+							<h5>Remax Executive</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 fleft">
+					<h3>Agent information</h3>
+					<div class="rounded clearfix">
+						<div class="agent-avatar">
+							<img src="images/agent-avatar.jpg" alt="">
+							<a href="#" onclick="return false;" class="change-agent-avatar icon" data-open-modal="change-agent-avatar"></a>
+						</div>
+						<form action="">
+							<div class="input-holder clearfix">
+								<label for="first-name">First Name:</label>
+								<input type="text" id="first-name" value="Jessica">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="last-name">Last Name:</label>
+								<input type="text" id="last-name" value="Young">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="mobile-no">Mobile No:</label>
+								<input type="text" id="mobile-no" value="321 - 123 - 4698">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="office-no">Office No:</label>
+								<input type="text" id="office-no" value="1 - 4567 - 654">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="email">Email:</label>
+								<input type="email" id="email" value="jessica@youngestate.com" disabled>
+							</div>
+							<div class="input-holder clearfix">
+								<label for="webiste">Website:</label>
+								<input type="text" id="webiste" value="http://www.youngestate.com/jessica">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="street">Street:</label>
+								<input type="text" id="street" value="626 N Graham Street">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="city">City:</label>
+								<input type="text" id="city" value="Charlotte">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="state">State:</label>
+								<input type="text" id="state" value="North Carolina">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="zip">Zip code:</label>
+								<input type="text" id="zip" value="23132">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="agency">Agency:</label>
+								<input type="text" id="agency" value="Young Estate Ltd">
+							</div>
+							<div class="input-holder clearfix">
+								<label for="mls">MLS:</label>
+								<input type="text" id="mls" value="North Carolina MLS">
+							</div>
+						</form>
+					</div>
+					<h3>password</h3>
+					<div class="rounded tac air-30">
+						<a href="#" class="btn big purple dib">Get new password by email</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="message-box copy">
+		<i class="icon message-icon"></i>
+		<p>
+			The link of <span></span>
+			has been copied to your clipboard
+		</p>
+	</div>
+
+	<div class="modals-holder">
+		<div class="whiten" data-close-modal></div>
+		<div class="modal change-agent-avatar">
+			<div class="modal-heading clearfix">
+				<h3>Edit photo</h3>
+				<a href="#" onclick="return false;" class="modal-close" data-close-modal></a>
+			</div>
+			Crop image
+		</div>
+
+		<div class="modal card-save-success">
+			<div class="modal-heading clearfix">
+				<h3>Card saved successfully</h3>
+				<a href="#" onclick="return false;" class="modal-close" data-close-modal></a>
+			</div>
+			<p class="hint-info tal">
+				Your debit card XXXX XXXX XXXX 1234 was successfully saved and your free trial is starting today.
+				Keep in mind that after the free trial is over, you are going to be charged  according  
+				to <a href="#" class="tdu">Fotag‘s payment agreement</a> unless you cancel your subscribtion before that. 
+			</p>
+			<div class="tac">
+				<a href="#" class="btn orange dib">Accept Agreement</a>
+			</div>
+		</div>
+
+		<div class="modal apply-discount-code">
+			<div class="modal-heading clearfix">
+				<h3>Enter discount code</h3>
+				<a href="#" onclick="return false;" class="modal-close" data-close-modal></a>
+			</div>
+			<p class="hint-info tal">
+				If you are provided with a discount from your agency, mls or Fotag you can take advantage of it
+by entering it here accouding to <a href="#" class="tdu">Fotag‘s payment agreement</a>. 
+			</p>
+			<form action="">
+				<div class="input-holder clearfix">
+					<label for="promo">Promo Code:</label>
+					<input type="text">
+				</div>
+				<input type="submit" class="btn orange" value="Apply Discount">
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container clearfix">
+			<ul class="foot-menu">
+				<li><a href="#">MY LEARNING CENTER</a></li>
+				<li><a href="#">CUSTOMER SUPPORT</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACTS</a></li>
+				<li><a href="#">TERMS & CONDITIONS</a></li>
+			</ul>
+			<div class="credits">
+				<img src="images/foot-logo.png" class="foot-logo" alt="FOTAG">
+				<p>© 2015 FOTAG LLC</p>
+			</div>                   
+			<div class="clearf"></div>
+		</div>
+	</footer>
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

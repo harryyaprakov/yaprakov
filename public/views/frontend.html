@@ -1,0 +1,83 @@
+<div ng-controller="FrontendCtrl">
+	<h2>Front-end Web Development</h2>
+	<div class="box">
+		<p>
+			I have 6 years of experience in the front-end web development field <br> with multiple certificates from academies and awards from contests.
+		</p>
+		<p>
+			My work involves using these technologies: <br>
+			<span style="color: #EF652A;">HTML5</span>, <span style="color: #2BA8E0;">CSS3</span>, <span style="color: #563D7E;">LESS</span> & <span style="color: #CC6699;">SASS</span>, <span style="color: #4B376C;">Bootstrap</span>, <span style="color: #e7b500;">JS/JQuery</span>, <span style="color: #C4473A;">AngularJS</span> & other js frameworks. <br>
+		</p>
+	</div>
+	<h3>Work For clients</h3>
+	<ul class="showcase row">
+		<li class="col-lg-4 col-md-4" ng-repeat="site in sites | filter:{for: 'clients'}">
+			<a class="work" href="/preview/frontend/{{ site.id }}" ng-click="openPreview()">
+				<div class="img-holder">
+					<img src="../images/{{ site.id }}/{{ site.id }}.jpg" alt="">
+					<h4><div>{{ site.name }}</div></h4>
+				</div>
+				<div class="url">{{ site.url }}</div>
+				<div class="date"><i class="fa fa-calendar"></i>{{ site.date }}</div>
+				<div class="tech" ng-bind-html="site.tech | to_trusted"></div>
+				<p class="job" ng-bind-html="site.job | to_trusted"></p>
+			</a>
+		</li>
+	</ul>
+
+	<h3><a href="http://www.imperiaonline.bg/bg/">Imperia Online</a> Internship</h3>
+	<ul class="showcase row">
+		<li class="col-lg-4 col-md-4" ng-repeat="site in sites | filter:{for: 'io'}">
+			<a class="work" href="/preview/frontend/{{ site.id }}" ng-click="openPreview()">
+				<div class="img-holder">
+					<img src="../images/{{ site.id }}/{{ site.id }}.jpg" alt="">
+					<h4><div>{{ site.name }}</div></h4>
+				</div>
+				<div class="url">{{ site.url }}</div>
+				<div class="date"><i class="fa fa-calendar"></i>{{ site.date }}</div>
+				<div class="tech" ng-bind-html="site.tech | to_trusted"></div>
+				<p class="job" ng-bind-html="site.job | to_trusted"></p>
+			</a>
+		</li>
+	</ul>
+
+	<h3><a href="http://slicecrowd.com/">SliceCrowd Academy</a> Projects</h3>
+	<ul class="showcase row">
+		<li class="col-lg-4 col-md-4" ng-repeat="site in sites | filter:{for: 'slicecrowd'}">
+			<a class="work" href="/preview/frontend/{{ site.id }}" ng-click="openPreview()">
+				<div class="img-holder">
+					<img src="../images/{{ site.id }}/{{ site.id }}.jpg" alt="">
+					<h4><div>{{ site.name }}</div></h4>
+				</div>
+				<div class="url">{{ site.url }}</div>
+				<div class="date"><i class="fa fa-calendar"></i>{{ site.date }}</div>
+				<div class="tech" ng-bind-html="site.tech | to_trusted"></div>
+				<p class="job" ng-bind-html="site.job | to_trusted"></p>
+			</a>
+		</li>
+	</ul>
+
+	<h3>Contests</h3>
+	<ul class="showcase row">
+		<li class="col-lg-4 col-md-4" ng-repeat="site in sites | filter:{for: 'devin'}">
+			<a class="work" href="/preview/frontend/{{ site.id }}" ng-click="openPreview()">
+				<div class="img-holder">
+					<img src="../images/{{ site.id }}/{{ site.id }}.jpg" alt="">
+					<h4><div>{{ site.name }}</div></h4>
+				</div>
+				<div class="url">{{ site.url }}</div>
+				<div class="date"><i class="fa fa-calendar"></i>{{ site.date }}</div>
+				<div class="tech" ng-bind-html="site.tech | to_trusted"></div>
+				<p class="job" ng-bind-html="site.job | to_trusted"></p>
+			</a>
+		</li>
+	</ul>
+
+	<div class="box last">
+		<p>
+			<img src="../images/angular.png" alt="">
+			My <span style="color: #C4473A;">AngularJS</span> apps are closely related to the usage of a database, so I have put them in the Backend section. <a href="/backend">Go check them out!</a>
+		</p>
+	</div>
+
+</div>

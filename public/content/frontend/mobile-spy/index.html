@@ -1,0 +1,511 @@
+<!DOCTYPE html>  			
+<html lang="en">				
+<head>					
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Mobilespy</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="font awesome/css/font-awesome.min.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map');
+        var map_options = {
+          center: new google.maps.LatLng(51.508636, -0.129028),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+	<div id="leftPanel" class="col-md-3 col-lg-3">
+		<a href="#" class="logo"></a>
+		<ul class="panel-group" id="mainMenu">
+			<li class="panel item">
+				<a data-toggle="collapse" data-parent="#accordion" href="#firstCollapse">device activite logs<div class="moreless"></div></a>
+				<ul id="firstCollapse" class="panel-collapse collapse mainSubMenu">
+					<li><a class="subItem" href="#"><span class="icon"></span>text messages</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>call history</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>address book</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>emails</a></li>
+					<li><a class="subItem active" href="#"><span class="icon"></span>gmail</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>GPS locations</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>cell ID</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>alers</a></li>
+				</ul>
+			</li>
+			<li class="panel item">
+				<a data-toggle="collapse" data-parent="#accordion" href="#secondCollapse">media logs<div class="moreless"></div>
+				</a>
+				<ul id="secondCollapse" class="panel-collapse collapse mainSubMenu">
+					<li><a class="subItem" href="#"><span class="icon"></span>photos</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>videos</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>stealth camera</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>surround recording</a></li>
+				</ul>
+			</li>
+			<li class="panel item">
+				<a data-toggle="collapse" data-parent="#accordion" href="#thirdCollapse">web logs<div class="moreless"></div>
+				</a>
+				<ul id="thirdCollapse" class="panel-collapse collapse mainSubMenu">
+					<li><a class="subItem" href="#"><span class="icon"></span>websites visited</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>youTube videos</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>bookmarks</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>online searches</a></li>
+				</ul>
+			</li>
+			<li class="panel item">
+				<a data-toggle="collapse" data-parent="#accordion" href="#forthCollapse">communication logs<div class="moreless"></div>
+				</a>
+				<ul id="forthCollapse" class="panel-collapse collapse mainSubMenu">
+					<li><a class="subItem" href="#"><span class="icon"></span>PIN messages</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>iMessages</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>WhatsApp</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>messengers</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>social networking</a></li>
+				</ul>
+			</li>
+			<li class="panel item">
+				<a data-toggle="collapse" data-parent="#accordion" href="#fifthCollapse">other logs<div class="moreless"></div>
+				</a>
+				<ul id="fifthCollapse" class="panel-collapse collapse mainSubMenu">
+					<li><a class="subItem" href="#"><span class="icon"></span>apps installed</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>calendar</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>tasks</a></li>
+					<li><a class="subItem" href="#"><span class="icon"></span>memo</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="minMenu">
+			<li class="greyLine"></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#" class="active"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li class="greyLine"></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li class="greyLine"></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li class="greyLine"></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li class="greyLine"></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+			<li><a href="#"><span class="icon"></span></a></li>
+		</ul>
+	</div>
+	<div id="rightPanel" class="col-md-9 col-lg-9">
+		<div id="rightNavMenu">
+			<ul>
+				<li><a href="#"><span class="icon right"></span>dashboard</a></li>
+				<li><a href="#"><span class="icon right"></span>my devices</a></li>
+				<li><a href="#"><span class="icon right"></span>live panel</a></li>
+				<li><a href="#"><span class="icon right"></span>user tools</a></li>
+				<li><a href="#"><span class="icon right"></span>support</a></li>
+			</ul>
+			<span id="minNotifications"></span>
+			<span class="welcomeUser"><span class="welcome">Welcome</span> Harry Yaprakov <img src="images/welcometri.png" /></span>
+			
+			<div class="fixer"></div>
+		</div>
+		<div id="secondLine">
+			<div class="phoneSelectHolder">
+				<select class="phoneSelect">
+					<option>Bakala's iPhone 5</option>
+					<option>Alex' Samsung Galaxy S4</option>
+					<option>Kire's Troshka 69</option>
+					<option>Mite's HugeTuhla T8</option>
+				</select>
+				<div class="phoneSelectArrow"></div>
+			</div>
+			<input id="searchWhere" type="text" placeholder="Search in text messages" />
+			<div class="searchIcon"></div>
+			<img src="images/searchtri.png" class="searchTri" />
+			<div class="fixer"></div>
+		</div>
+		<div id="main">
+			<div class="blueCont">
+				<ul class="nav nav-tabs">
+					<li><a href="#emails" data-toggle="tab">Emails</a></li>
+					<li><a href="#calls" data-toggle="tab">Calls</a></li>
+					<li><a href="#texts" data-toggle="tab">Texts</a></li>
+					<li><a href="#websites" data-toggle="tab">Websites</a></li>
+				</ul>
+				<div class="phoneSelectHolder">
+					<select class="phoneSelect">
+						<option>Top 10 all time</option>
+						<option>Top 190562</option>
+					</select>
+					<div class="phoneSelectArrow"></div>
+				</div>
+				<div class="tab-content">
+					<div class="tab-pane" id="emails">Holisticly re-engineer value-added outsourcing after process-centric collaboration and idea-sharing. 
+							Energistically simplify impactful niche markets via enabled imperatives. 
+							Holisticly predominate premium innovation after compelling scenarios.Holisticly re-engineer value-added outsourcing after process-centric collaboration and idea-sharing. 
+							Energistically simplify impactful niche markets via enabled imperatives. 
+							Holisticly predominate premium innovation after compelling scenarios.Holisticly re-engineer value-added outsourcing after process-centric collaboration and idea-sharing. 
+							Energistically simplify impactful niche markets via enabled imperatives. 
+							Holisticly predominate premium innovation after compelling scenarios.</div>
+					<div class="tab-pane" id="calls">..asdfasdfas</div>
+					<div class="tab-pane active" id="texts">
+						<div class="graphHolder">
+							<h3>SMS Details - Top 10 Since 2013-04-25</h3>
+							<div class="graph">
+								<div class="lines">
+									<div class="line"><span>4</span></div>
+									<div class="line"><span>3</span></div>
+									<div class="line"><span>2</span></div>
+									<div class="line"><span>1</span></div>
+									<div class="line"><span>0</span></div>
+								</div>
+								<div class="boxes">
+									<div class="person">
+										<div class="outgoing" style="height: 50px;"></div>
+										<div class="incoming" style="height: 100px;"></div>
+										<div class="personInfo">
+										702-658-761 8
+										(Erica White)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 40px;"></div>
+										<div class="incoming" style="height: 150px;"></div>
+										<div class="personInfo">
+										702-251-303 0
+										(Chris Kileen)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 90px;"></div>
+										<div class="incoming" style="height: 10px;"></div>
+										<div class="personInfo">
+										702-294-242 4
+										(Jason Honeycomb)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 80px;"></div>
+										<div class="incoming" style="height: 130px;"></div>
+										<div class="personInfo">
+										702-658-761 8
+										(Erica White)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 100px;"></div>
+										<div class="incoming" style="height: 70px;"></div>
+										<div class="personInfo">
+										702-251-303 0
+										(Chris Kileen)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 50px;"></div>
+										<div class="incoming" style="height: 85px;"></div>
+										<div class="personInfo">
+										702-294-242 4
+										(Jason Honeycomb)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 190px;"></div>
+										<div class="incoming" style="height: 30px;"></div>
+										<div class="personInfo">
+										702-658-761 8
+										(Erica White)
+										</div>
+									</div>
+									<div class="person">
+										<div class="outgoing" style="height: 30px;"></div>
+										<div class="incoming" style="height: 150px;"></div>
+										<div class="personInfo">
+										702-251-303 0
+										(Chris Kileen)
+										</div>
+									</div>
+									
+									<div class="fixer"></div>
+								</div>
+							</div>
+							<div class="legend">
+								<div class="outgoing icon"></div>
+								<span>outgoing</span>
+								<div class="incoming icon"></div>
+								<span>incoming</span>
+								<div class="circle icon"></div>
+								<span>outgoing</span>
+								<div class="square icon"></div>
+								<span>incoming</span>
+								
+								<div class="fixer"></div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="websites">.fasdffsadfasdfasdfasdf..</div>
+				</div>
+			</div>
+			<div class="alertBox">
+				<span class="infoIcon"></span>
+				<span class="alertMessage">You have 1 unused License key(s) in your account. <a href="#">Click here</a> for more details. <a href="#">Click here</a> to add new license(s).</span>
+				<a class="crossIcon" href="#"></a>
+				<div class="fixer"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-6">
+					<div class="blueCont">
+						<h2>Last Known Location</h2>
+						<div id="map">Trafalgar Square, Westminster, London WC2N 5DN</div>
+						<div id="location">Trafalgar Square, Westminster, London WC2N 5DN</div>
+					</div>	
+				</div>	
+				<div class="col-md-6 col-lg-6">
+					<div class="blueCont smsHolder">
+						<h2>Last Few SMS</h2>
+						<ul class="sms">
+							<li class="date">
+							2013-04-25 18:11:51
+							</li>
+							<li class="info">
+							<span class="sendrec">Sender:</span> <span class="name"> Jason Honeycomb</span>
+							<span class="sendrec">Receiver:</span> <span class="name"> Jack Kickman</span>
+							</li>
+							<li class="text">
+							I can go for some chocolate chip pancakes like a mofo :)
+							Text me when you get close hun <3
+							</li>
+						</ul>
+						<ul class="sms">
+							<li class="date">
+							2014-01-01 04:08:69
+							</li>
+							<li class="info">
+							<span class="sendrec">Sender:</span> <span class="name"> Matt LeBlanc</span>
+							<span class="sendrec">Receiver:</span> <span class="name"> Husky White</span>
+							</li>
+							<li class="text">
+							That sucks, so no cruising this weekend huh?
+							</li>
+						</ul>
+						<ul class="sms">
+							<li class="date">
+							2069-02-31 18:69:96
+							</li>
+							<li class="info">
+							<span class="sendrec">Sender:</span> <span class="name"> Hristiyan Yaprakov</span>
+							<span class="sendrec">Receiver:</span> <span class="name"> Tihomir Traikov</span>
+							</li>
+							<li class="text">
+							Holisticly re-engineer value-added outsourcing after process-centric collaboration and idea-sharing. 
+							Energistically simplify impactful niche markets via enabled imperatives. 
+							Holisticly predominate premium innovation after compelling scenarios. 
+							</li>
+						</ul>
+						<ul class="sms">
+							<li class="date">
+							2013-04-25 18:11:51
+							</li>
+							<li class="info">
+							<span class="sendrec">Sender:</span> <span class="name"> Jason Honeycomb</span>
+							<span class="sendrec">Receiver:</span> <span class="name"> Jack Kickman</span>
+							</li>
+							<li class="text">
+							I can go for some chocolate chip pancakes like a mofo :)
+							Text me when you get close hun <3
+							</li>
+						</ul>
+						<ul class="sms">
+							<li class="date">
+							2014-01-01 04:08:69
+							</li>
+							<li class="info">
+							<span class="sendrec">Sender:</span> <span class="name"> Matt LeBlanc</span>
+							<span class="sendrec">Receiver:</span> <span class="name"> Husky White</span>
+							</li>
+							<li class="text">
+							That sucks, so no cruising this weekend huh?
+							</li>
+						</ul>
+						
+						<div class="fixer"></div>
+					</div>		
+				</div>		
+			</div>
+			<div class="blueCont">
+				<h2>Device Health Info</h2>
+				<div class="dev">
+					<div class="devPiece"><span class="devIcon wifi"></span> <span class="devContent">Enabled</span></div>
+					<div class="devPiece"><span class="devIcon bluetooth"></span> <span class="devContent">Enabled</span></div>
+					<div class="devPiece"><span class="devIcon gps"></span> <span class="devContent">Enabled</span></div>
+					<div class="devPiece"><span class="devIcon battery"></span> <span class="devContent">53%</span></div>
+					<div class="devPiece"><span class="devIcon coverage"></span> <span class="devContent">71%</span></div>
+					<div class="devPiece"><span class="devIcon storage"></span> <span class="devContent">7.92 GB free of 25.78 GB</span></div>
+				</div>	
+				<div class="fixer"></div>
+			</div>		
+			<div class="blueCont">
+				<h2>Device Information</h2>
+				<div class="infoRow">
+					<div class="left">
+						<span class="title">OS:</span>
+						<span class="content">7.0.2</span>
+					</div>
+					<div class="right">
+						<span class="title">IMEI:</span>
+						<span class="content">3641663272544218</span>
+					</div>
+					<div class="fixer"></div>
+				</div>
+				<div class="infoRow">
+					<div class="left">
+						<span class="title">Carrier:</span>
+						<span class="content">O2 Mobile</span>
+					</div>
+					<div class="right">
+						<span class="title">IMSI:</span>
+						<span class="content">634820.22.063715.2</span>
+					</div>
+					<div class="fixer"></div>
+				</div>
+				<div class="infoRow">
+					<div class="left">
+						<span class="title">Model:</span>
+						<span class="content">iPhone 5S</span>
+					</div>
+					<div class="right">
+						<span class="title">Device ID:</span>
+						<span class="content">5638ghh84890240smf23489639mg8p87426f38</span>
+					</div>
+					<div class="fixer"></div>
+				</div>
+				<div class="infoRow">
+					<div class="left">
+						<span class="title">Device:</span>
+						<span class="content">iPhone</span>
+					</div>
+					<div class="right">
+						<span class="title">Version:</span>
+						<span class="content">Mobile Spy® 6.5</span>
+					</div>
+					<div class="fixer"></div>
+				</div>
+				
+				<div class="fixer"></div>
+			</div>	
+			<div id="lastInfo">
+				<div class="last login">
+					<span class="title">Last Login:</span>
+					<span class="content">2013-12-02 11:29:52</span>
+				</div>
+				<div class="last loginip">
+					<span class="title">Last Login IP:</span>
+					<span class="content">192.168.0.1</span>
+				</div>
+			</div>
+			<!-- Button trigger modal -->
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			Launch demo modal
+
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">
+			some very wierd shit 
+					<div class="blueCont">
+						<h2>Last Known Location</h2>
+						<div id="map">Trafalgar Square, Westminster, London WC2N 5DN</div>
+						<div id="location">Trafalgar Square, Westminster, London WC2N 5DN</div>
+					</div>	
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+			</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+		<a id="myTooltip" class="btn btn-primary" href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
+		<script type="text/javascript">
+			$('document').ready(function{
+				$('#myTooltip').tooltip();
+			});
+			
+		</script>
+		</div>
+		<div id="footerHolder">
+			<div id="footer">
+				<ul class="foot menu">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">My Device</a></li>
+					<li><a href="#">Licenses</a></li>
+					<li><a href="#">Export Logs</a></li>
+					<li><a href="#">Fetch Logs</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Policies</a></li>
+				</ul>
+				<div class="fixer"></div>
+				<ul class="foot social">
+					<li>Like us on <a href="#">Facebook</a></li>
+					<li>Follow us on <a href="#">Twitter</a></li>
+					<li>Join us on <a href="#">Google+</a></li>
+				</ul>
+				<div class="fixer"></div>
+				<div class="credits">Usage of Mobile Spy® is subject to these <a href="#">Terms and Conditions.</a> Any violation will result in immediate termination of your services.
+				© 2006-2013 Retina-X Studios, LLC. All Rights Reserved.</div>
+				<div class="fixer"></div>
+			</div>
+		</div>
+	</div>
+	<div id="notifications">
+		<div class="notification">
+			<span class="title"><span class="name">Erica White</span> just sent a message</span>
+			<span class="message">Nope :( Still in the shop, had to order new
+			springs n they aren't in yet.</span>
+		</div>
+		<div class="notification">
+			<span class="title"><span class="name">Chris Kileen</span> just sent a message</span>
+			<span class="message">K bro, talk to you later.</span>
+		</div>
+		<div class="notification">
+			<span class="title"><span class="name">Jason Honeycomb</span> just sent a message</span>
+			<span class="message">Holisticly re-engineer value-added outsourcing after process-centric collaboration and idea-sharing. <span>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

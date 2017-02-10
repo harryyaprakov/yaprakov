@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'LEngineer';
+    src: url('LEngineer-Regular.eot');
+    src: url('LEngineer-Regular.eot?#iefix') format('embedded-opentype'),
+         url('LEngineer-Regular.woff') format('woff'),
+         url('LEngineer-Regular.ttf') format('truetype'),
+         url('LEngineer-Regular.svg#robotobold') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LEngineer';
+    src: url('LEngineer-Italic.eot');
+    src: url('LEngineer-Italic.eot?#iefix') format('embedded-opentype'),
+         url('LEngineer-Italic.woff') format('woff'),
+         url('LEngineer-Italic.ttf') format('truetype'),
+         url('LEngineer-Italic.svg#robotobold') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}

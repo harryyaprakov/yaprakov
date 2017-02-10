@@ -1,0 +1,13 @@
+{
+  "name": "Fotag",
+  "version": "0.0.0",
+  "main": "index",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "libs",
+    "test",
+    "tests"
+  ]
+}

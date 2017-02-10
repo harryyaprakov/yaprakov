@@ -1,0 +1,43 @@
+<div ng-controller="FrontendCtrl" class="preview">
+	
+	<div class="clearfix" style="width: 100%;">
+		<div class="box fleft">
+			<a href="/frontend" class="back"><i class="fa fa-caret-left"></i>Back</a>
+			<div class="cells clearfix">
+				<div class="cell">
+					<h4><div>{{ website.name }}</div></h4>
+				</div>
+				<div class="cell">
+					<a href="{{ website.url }}" class="orange-color" target="_blank" class="url">{{ website.url }}</a>
+				</div>
+				<div class="cell">
+					<div class="date"><i class="fa fa-calendar"></i>{{ website.date }}</div>
+				</div>
+				<div class="cell">
+					<div class="tech" ng-bind-html="website.tech | to_trusted"></div>
+				</div>
+			</div>
+			<p class="job clearfix" ng-bind-html="website.job | to_trusted"></p>
+		</div>
+		<div class="box fright" ng-if="website.responsive">
+			<h4>This website is <span class="orange-color">Responsive</span></h4>
+			<p>Set page width to:</p>
+			<ul class="responsive-btns clearfix">
+				<li ng-click="setFrameWidth('xs')" class="res-btns res-btn-xs">400px</li>
+				<li ng-click="setFrameWidth('xs-ls')" class="res-btns res-btn-xs-ls">700px</li>
+				<li ng-click="setFrameWidth('sm')" class="res-btns res-btn-sm">990px</li>
+				<li ng-click="setFrameWidth('md')" class="res-btns res-btn-md">1200px</li>
+				<li ng-click="setFrameWidth('full')" class="res-btns res-btn-full">ORIGINAL</li>
+			</ul>
+		</div>
+	</div>
+	<ul class="preview-files-toggle clearfix">
+		<li class="active" ng-class="{active:isSelected(0)}" ng-click="selectTab(0)" >WEBPAGE</li>
+		<li ng-repeat="image in website.designs" ng-class="{active:isSelected($index+1)}" ng-click="selectTab($index+1)" >DESIGN - {{ image.url }}</li>
+	</ul>
+
+	<iframe src="{{trustedUrl}}" class="xs" ng-class="{active:isSelected(0)}" frameborder="0"></iframe>
+
+	<img ng-repeat="image in website.designs" src="../images/{{ website.id }}/{{ image.url }}" ng-class="{active:isSelected($index+1)}" alt="">
+
+</div>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOTAG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="fonts/open-sans/open-sans.css">
+	<link rel="stylesheet" href="fonts/font-awesome/font-awesome.css">
+	<link rel="stylesheet" href="fonts/centennial/centennial.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<header>
+		<div class="container clearfix">
+			<a href="#" class="main-logo">FOTAG</a>
+			<nav class="desktop-menu">
+				<ul class="main-menu">
+					<li><a href="agency-admins.html"><i class="icon"></i> My Agents</a></li>
+					<li><a href="index.html" class="active"><i class="icon"></i> My Listings</a></li>
+					<li><a href="my-learning-center.html"><i class="icon"></i> My Learning Center</a></li>
+				</ul>
+				<ul class="account-menu">
+					<li><a href="my-account.html"><i class="icon"></i> My Account</a></li>
+					<li>
+						<a href="#" class="logoff" onclick="return false;" data-dropdown-trigger><i class="icon"></i> Log off</a>
+						<ul class="dropdown">
+							<li><a href="#">Profile Settings</a></li>
+							<li><a href="#">Billing Information</a></li>
+							<li><a href="#">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="mobile-menu">
+				<a href="#" class="trigger" onclick="return false;" data-dropdown-trigger><i class="icon"></i></a>
+				<ul class="dropdown">
+					<li><a href="agency-admins.html"><i class="icon"></i> My Agents</a></li>
+					<li><a href="#" class="active"><i class="icon"></i> My Listings</a></li>
+					<li><a href="#"><i class="icon"></i> My Learning Center</a></li>
+					<li><a href="my-account.html" class="settings"><i class="icon"></i> My Account</a></li>
+					<li><a href="#" class="logoff"><i class="icon"></i> Log off</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="operating-admin">
+		currently operating as <span>jessica young</span> <img src="images/agent-avatar.jpg" alt="">
+	</div>
+	
+	<div class="content">
+		
+		<div class="container">
+			<div class="content-heading clearfix" >
+				<h1>My Listings</h1>
+				<form action="">
+					<div class="search-holder">
+						<input type="text" class="search-bar" placeholder="Search listings by street address">
+						<input type="submit" class="search-btn" value="">
+					</div>
+				</form>
+				<a href="#" class="btn orange" onclick="return false;" data-open-modal="create-listing">Create new listing</a>
+			</div>
+			<div class="content-navigation clearfix">
+				<ul class="tabs left">
+					<li class="tabs-title">Show:</li>
+					<li class="tab-trigger active">All</li>
+					<li class="tab-trigger">Active</li>
+					<li class="tab-trigger">UC Showing</li>
+					<li class="tab-trigger">Sold</li>
+					<li class="tab-trigger">UC Not Showing</li>
+					<li class="tab-trigger">Withdrawn</li>     
+				</ul>
+				<div class="filter-tabs-mobile">
+					<b>Show: </b>
+					<div class="select-holder">
+						<select>
+							<option>All</option>
+							<option>Active</option>
+							<option>UC Showing</option>
+							<option>Sold</option>
+							<option>UC Not Showing</option>
+							<option>Withdrawn</option> 
+						</select>	
+					</div>
+					<i class="icon fa-caret-down"></i>
+				</div>
+				<ul class="tabs right">
+					<li class="tabs-title">View:</li>
+					<li class="tab-trigger active" onclick="return false;" data-listings-grid><i class="icon fa-th"></i> Grid</li>
+					<li class="tab-trigger" onclick="return false;" data-listings-list><i class="icon fa-bars"></i> List</li>   
+				</ul>
+			</div>
+			<ul class="listings grid row">
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img3.jpg" alt="">
+					</div>
+					<h2>765 Elm Street</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="preview-theme2.html">Preview</a>
+						</li>
+					</ul>
+				</li>
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img1.jpg" alt="">
+					</div>
+					<h2>965 N Center Street</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="#">Preview</a>
+						</li>
+					</ul>
+				</li>
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img2.jpg" alt="">
+					</div>
+					<h2>546 Hickory Ave</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="#">Preview</a>
+						</li>
+					</ul>
+				</li>
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img4.jpg" alt="">
+					</div>
+					<h2>432 Elm Avenue</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="#">Preview</a>
+						</li>
+					</ul>
+				</li>
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img5.jpg" alt="">
+					</div>
+					<h2>6543 Oak Blvrd</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="#">Preview</a>
+						</li>
+					</ul>
+				</li>
+				<li class="listing clearfix col-lg-3 col-md-4 col-sm-4">
+					<div class="img">
+						<img src="images/img6.jpg" alt="">
+					</div>
+					<h2>662 Minister Street</h2>
+					<div class="listing-options">
+						<i class="icon option copy"></i>
+					</div>
+					<ul class="controls clearfix">
+						<li>
+							<a href="#" onclick="return false;" data-dropdown-trigger>Active (Still for Sale) <i class="icon fa-caret-down"></i></a>
+							<ul class="dropdown">
+								<li><a href="#">Under Contract - Showing</a></li>
+								<li><a href="#">Sold</a></li>
+								<li><a href="#">Under Contract - Not Showing</a></li>
+								<li><a href="#">Withdrawn</a></li>
+								<li><a href="#">Incomplete</a></li>
+							</ul>
+						</li>
+						<li class="small green">
+							<a href="edit-listing.html">Edit</a>
+						</li>
+						<li class="small orange">
+							<a href="#">Preview</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="message-box copy">
+		<i class="icon message-icon"></i>
+		<p>
+			The link of <span></span>
+			has been copied to your clipboard
+		</p>
+	</div>
+
+	<div class="modals-holder">
+		<div class="whiten" data-close-modal></div>
+		<div class="modal create-listing">
+			<div class="modal-heading clearfix">
+				<h3>Create new listing</h3>
+				<a href="#" onclick="return false;" class="modal-close" data-close-modal></a>
+			</div>
+			<form action="">
+				<div class="input-holder clearfix">
+					<label for="street">Street:</label>
+					<input type="text" id="street">
+				</div>
+				<div class="input-holder clearfix">
+					<label for="city">City:</label>
+					<input type="text" id="city">
+				</div>
+				<div class="input-holder clearfix">
+					<label for="state">State:</label>
+					<input type="text" id="state">
+				</div>
+				<div class="input-holder clearfix">
+					<label for="zip">Zip code:</label>
+					<input type="text" id="zip">
+				</div>
+				<div class="checkbox-btn">
+					<input id="guarantee" type="checkbox">
+					<label for="guarantee">I guarantee that I own the copyright of every photo I upload 
+					on this listing accourding to the <a href="#">Fotag End User Agreement!</a></label>
+				</div>
+				<input type="submit" class="btn big orange" value="Create listing">
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container clearfix">
+			<ul class="foot-menu">
+				<li><a href="#">MY LEARNING CENTER</a></li>
+				<li><a href="#">CUSTOMER SUPPORT</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACTS</a></li>
+				<li><a href="#">TERMS & CONDITIONS</a></li>
+			</ul>
+			<div class="credits">
+				<img src="images/foot-logo.png" class="foot-logo" alt="FOTAG">
+				<p>© 2015 FOTAG LLC</p>
+			</div>                   
+			<div class="clearf"></div>
+		</div>
+	</footer>
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

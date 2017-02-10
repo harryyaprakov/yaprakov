@@ -1,0 +1,788 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family:  Georgia, "Palatino Linotype", "Book Antiqua", "Times New Roman" serif;
+}
+body {
+	background: url('../images/bckg.jpg') center fixed;
+}
+.cont {
+	width: 970px;
+	margin: 0 auto;
+	display: none;
+	border-radius: 8px;
+	border: 1px solid #e8d4ac;
+	box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+	background: url(../images/cont-bckg-over.png) center 40px no-repeat, url(../images/cont-bckg-foot.png) bottom center no-repeat, url(../images/cont-bckg-pattern.jpg) repeat;
+	background-color: #ccbea1;
+}
+.cont-head {
+	height: 32px;
+	margin: -1px -1px 0 -1px;
+	padding: 4px 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 6px 6px 0 0;
+	border: 1px solid #8b3e27;
+	border-bottom: none;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	background: url(../images/cont-head.jpg); 
+}
+.head-icon {
+	width: 22px;
+	height: 22px;
+	display: block;
+	background: url(../images/icons.png);
+	cursor: pointer;
+}
+.head-icon.info {
+	float: left;
+}
+.head-icon.close {
+	float: right;
+	background-position: 31px -26px; 
+}
+.head-icon.close:hover {
+	background-position: -2px -26px; 
+}
+.cont-head .head-title {
+	height: 20px;
+	display: inline-block;
+	position: relative;
+	padding: 0 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #c7ae8d;
+	background: url(../images/head-title.png) repeat-x;
+}
+.cont-head .head-title:before, 
+.cont-head .head-title:after {
+	content: "";
+	width: 16px;
+	height: 21px;
+	position: absolute;
+		top: -2px;
+	display: block;
+	background: url(../images/icons.png) -24px 0px no-repeat;
+}
+.cont-head .head-title:before {
+		left: -9px;
+}
+.cont-head .head-title:after {
+		right: -12px;
+	background-position: -42px 0px;
+}
+.tab-holder {
+	position: relative;
+	margin: 20px 20px 20px 38px;
+	border-radius: 5px;
+	border: 1px solid #776c56;
+	background: rgba(215, 201, 171, 0.5);
+}
+.tab {
+	display: none;
+	padding: 0 7px 20px 0;
+}
+.visible {
+	display: block;
+}
+.tab-triggers {
+	height: 120px;
+	position: absolute;
+		top: 50%;
+		left: -28px;
+	display: block;
+	margin: -60px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+.tab-tr {
+	width: 26px;
+	height: 35px;
+	display: block;
+	border-radius: 4px 0 0 4px;
+	border: 1px solid #776c56;
+	margin: 3px 0;
+	background: url(../images/tab-icons.png) 3px 7px no-repeat;
+	background-color: rgba(127, 117, 99, 0.8);
+	cursor: pointer;
+}
+.tab-tr:hover {
+	background-color: rgba(127, 117, 99, 0.6);
+}
+.tab-tr.active {
+	background-image: url(../images/tab-icons-active.png);
+	background-color: rgba(215, 201, 171, 0.5);
+	border-right-color: rgba(215, 201, 171, 0.85);
+}
+.tab-tr.params {
+	background-position: 3px -29px; 
+}
+.tab-tr.gr-ppl {
+	background-position: 2px -67px; 
+}
+.btn {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	border-radius: 6px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.74);
+	box-shadow: 0px 0px 1px 3px rgba(122, 90, 71, 0.2);
+	color: #f1ecdc;
+	background: url(../images/btn-bckg.jpg) repeat-x;
+	border: 1px solid #59453a;
+	cursor: pointer;
+}
+.btn:hover {
+	background: url(../images/btn-bckg-hover.jpg) repeat-x;
+}
+.btn.big {
+	margin: 30px;
+	padding: 0 30px;
+}
+.btn:before, 
+.btn:after {
+	content: "";
+	width: 5px;
+	height: 5px;
+	position: absolute;	
+		top: 0px;
+	background: url(../images/btn-inner-shadow.png) left;
+}
+.btn:before {
+	left: 0;
+}
+.btn:after {
+	right: 0;
+	background-position: 5px 0;
+}
+.buttons-wrapper {
+	margin-bottom: 140px;
+	text-align: center;
+}
+.buttons-wrapper .btn {
+	width: 136px;
+	margin: 0 3px;
+}
+.switch {
+	width: 120px;
+	margin: 0 auto 15px auto;
+	display: block;
+}
+
+/* CONTENT */
+
+.line {
+	margin-left: 11px;
+	border-bottom: 1px solid #95866b;
+}
+.clearfix:after {
+   content: ""; 
+   height: 0;
+   visibility: hidden;
+   display: block;
+   clear: both;
+}
+.player-info {
+	width: 136px;
+	padding: 25px 0;
+	font-size: 14px;
+	color: #4d402f;
+	text-align: center;
+	background: url(../images/pl-info-bckg.png) no-repeat;
+}
+.player-info img {
+	margin-bottom: 15px;
+}
+.posit {
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 16px;
+	font-weight: bold;
+	color: #4b4436;
+}
+.pinfo {
+	width: 110px;
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 4px auto;
+	padding: 0 0 0 25px;
+	text-decoration: none;
+	text-align: left;
+	color: #4d402f;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: url(../images/icons.png) 5px -48px no-repeat;
+}
+.pinfo.clan {
+	text-transform: uppercase;
+	color: #833f31;
+	background-position: 0 -66px;
+}
+.res {
+	width: 120px;
+	margin: 30px 0;
+	padding: 0;
+	list-style: none;
+}
+.res li {
+	padding: 2px 35px 2px 0;
+	text-align: right;
+	background: url(../images/icons.png) 90px -89px no-repeat;
+}
+.res li.gold {
+	background-position: 90px -142px;
+}
+.res li.transport {
+	background-position: 90px -116px;
+}
+.player-info,
+.armies {
+	float: left;
+}
+.armies {
+	padding: 10px 0 0 5px;
+}
+.warriors {
+	width: 760px;
+	height: 46px;
+	position: relative;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	list-style: none;
+	overflow: hidden;
+}
+.skills {
+	width: 705px;
+	margin: 15px auto;
+}
+.warriors li {
+	float: left;
+	display: inline-block;
+}
+.warriors li div {
+	width: 44px;
+	height: 46px;
+	display: block;
+	background: url(../images/warriors.png) 0 0 ;
+	cursor: pointer;
+}
+.warriors.skills li div {
+	margin: 3px 1px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #f8e7bd;
+	border-radius: 3px;
+	background: url(../images/skills_40x40.png) 0 0 ;
+}
+.warriors .archer { background-position: -45px 0; }
+.warriors .swordsman { background-position: -90px 0; }
+.warriors .light-cav { background-position: -135px 0; }
+.warriors .ram { background-position: -180px 0; }
+.warriors .sup-wagon { background-position: -225px 0; }
+.warriors .heavy-spearman { background-position: -270px 0; }
+.warriors .heavy-archer { background-position: -315px 0; }
+.warriors .heavy-swordsman { background-position: -360px 0; }
+.warriors .heavy-cav { background-position: -405px 0; }
+.warriors .catapult { background-position: -450px 0; }
+.warriors .ballista { background-position: -495px 0; }
+.warriors .phalanx { background-position: -540px 0; }
+.warriors .elite-archer { background-position: -585px 0; }
+.warriors .guardian { background-position: -630px 0; }
+.warriors .paladin { background-position: -675px 0; }
+.warriors .trebuchet { background-position: -720px 0; }
+.warriors.skills .Icommander { background-position: -40px 0px; }
+.warriors.skills .Ccommander { background-position: -80px 0px; }
+.warriors.skills .siege { background-position: -120px 0px; }
+.warriors.skills .healer { background-position: -160px 0px; }
+.warriors.skills .scientist { background-position: 0px -40px; }
+.warriors.skills .attackerS { background-position: -40px -40px; }
+.warriors.skills .defenderS { background-position: -80px -40px; }
+.warriors.skills .Fguardian { background-position: -120px -40px; }
+.warriors.skills .slayer { background-position: -160px -40px; }
+.warriors.skills .fugitive { background-position: 0px -80px; }
+.warriors.skills .pillager { background-position: -40px -80px; }
+.warriors.skills .robber { background-position: -80px -80px; }
+.warriors.skills .guide { background-position: -120px -80px; }
+.warriors.skills .Gtactitian { background-position: -160px -80px; }
+.warriors.skills .tactitian { background-position: 0px -120px; }
+.warriors.skills .civils { background-position: -40px -120px; }
+.warriors.skills .manager { background-position: -80px -120px; }
+
+.shit-carousel {
+	position: relative;
+}
+.shit-arrow-left {
+	width: 19px;
+	height: 21px;
+	position: absolute;
+		top: 10px;
+		left: 5px;
+	background: url(../images/nav-arrows.png) left;
+	cursor: pointer;
+}
+.shit-arrow-right {
+	width: 19px;
+	height: 21px;
+	position: absolute;
+		top: 10px;
+		right: 5px;
+	background: url(../images/nav-arrows.png) right;
+	cursor: pointer;
+}
+
+.warriors li .inactive {
+	opacity: 0.35;
+}
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+.dashed-line {
+	margin: 20px 0 30px 12px;
+	width: 478px;
+	height: 1px;
+	background: url(../images/dashed-line.png) repeat-x;
+}
+.longer {
+	width: 560px;
+}
+.btn.small {
+	width: 30px;
+	height: 30px;
+}
+.army-icon {
+	width: 30px;
+	height: 30px;
+	background: url(../images/army-btns.png) no-repeat; 
+}
+.army-icon.army1 { background-position: 6px 4px; }
+.army-icon.army2 { background-position: -35px 4px; }
+.army-icon.army3 { background-position: -74px 4px; }
+.army-icon.army4 { background-position: -115px 4px; }
+.army-icon.add-all { background-position: -183px 4px; }
+.army-icon.clear-all { background-position: -150px 4px; }
+.army-icon.remove-all { background-position: -217px 4px; }
+
+.selected {
+	width: 750px;
+	min-height: 96px;
+	margin: 0 0 20px 0;
+	padding: 0;
+	list-style: none;
+	background: url(../images/sel.png) 0px 1px;
+}
+.selected.nobckg {
+	background: no-repeat;
+}
+.selected.nobckg li {
+	background: url(../images/sel.png) 0px 1px;
+}
+.selected li {
+	width: 71px;
+	height: 96px;
+	position: relative;
+	display: block;
+	float: left;
+	margin: 3px 2px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.selected li:hover > .red-cross {
+	display: block;
+}
+.selected li.left-right:hover > .red-cross {
+	display: block;
+}
+.selected li:hover > .warrior {
+	opacity: 0.5;
+}
+.selected li .warrior {
+	width: 58px;
+	height: 58px;
+	display: block;
+	margin: 6px auto;
+	background: url(../images/warriors-big.png) no-repeat;
+	cursor: default;
+	cursor: pointer;
+}
+.selected .archer .warrior { background-position: -58px 0 }
+.selected .swordsman .warrior { background-position: -116px 0; }
+.selected .light-cav .warrior { background-position: -174px 0; }
+.selected .ram .warrior { background-position: -232px 0; }
+.selected .sup-wagon .warrior { background-position: -290px 0; }
+.selected .heavy-spearman .warrior { background-position: -348px 0; }
+.selected .heavy-archer .warrior { background-position: -406px 0; }
+.selected .heavy-swordsman .warrior { background-position: -464px 0; }
+.selected .heavy-cav .warrior { background-position: -522px 0; }
+.selected .catapult .warrior { background-position: -580px 0; }
+.selected .ballista .warrior { background-position: -638px 0; }
+.selected .phalanx .warrior { background-position: -696px 0; }
+.selected .elite-archer .warrior { background-position: -750px 0; }
+.selected .guardian .warrior { background-position: -812px 0; }
+.selected .paladin .warrior { background-position: -870px 0; }
+.selected .trebuchet .warrior { background-position: -928px 0; }
+
+.selected .param .warrior {
+	background: url(../images/params-sprite.png) 10px 10px no-repeat;
+}
+.selected .param:nth-child(2) .warrior { background-position: -68px 10px; }
+.selected .param:nth-child(3) .warrior { background-position: -145px 10px; }
+.selected .param:nth-child(4) .warrior { background-position: -220px 10px; }
+.selected .param:nth-child(5) .warrior { background-position: -298px 10px; }
+.selected .param:nth-child(6) .warrior { background-position: -298px 10px; }
+.selected .param:nth-child(6) .warrior { background-position: -373px 10px; }
+.selected .param:nth-child(7) .warrior { background-position: -453px 10px; }
+.selected .param:nth-child(8) .warrior { background-position: -529px 10px; }
+.selected .param:nth-child(9) .warrior { background-position: -605px 10px; }
+.selected .param:nth-child(10) .warrior { background-position: -680px 10px; }
+.selected .param:nth-child(11) .warrior { background-position: -764px 10px; }
+.selected .param:nth-child(12) .warrior { background-position: -838px 10px; }
+.selected .param:nth-child(13) .warrior { background-position: -917px 10px; }
+.selected .param:nth-child(14) .warrior { background-position: -993px 10px; }
+.selected .param:nth-child(15) .warrior { background-position: -1069px 10px; }
+.selected .param:nth-child(16) .warrior { background-position: -1149px 10px; }
+
+.selected .Acommander .warrior { background-position: -1048px 0px; }
+.selected .Icommander .warrior { background-position: -1106px 0px; }
+.selected .Ccommander .warrior { background-position: -1164px 0px; }
+.selected .siege .warrior { background-position: -1222px 0px; }
+.selected .healer .warrior { background-position: -1280px 0px; }
+.selected .scientist .warrior { background-position: -1338px 0px; }
+.selected .attackerS .warrior { background-position: -1396px 0px; }
+.selected .defenderS .warrior { background-position: -1454px 0px; }
+.selected .Fguardian .warrior { background-position: -1512px 0px; }
+.selected .slayer .warrior { background-position: -1569px 0px; }
+.selected .fugitive .warrior { background-position: -1628px 0px; }
+.selected .pillager .warrior { background-position: -1686px 0px; }
+.selected .robber .warrior { background-position: -1744px 0px; }
+.selected .guide .warrior { background-position: -1802px 0px; }
+.selected .Gtactitian .warrior { background-position: -1860px 0px; }
+.selected .tactitian .warrior { background-position: -1918px 0px; }
+.selected .civils .warrior { background-position: -1976px 0px; }
+.selected .manager .warrior { background-position: -2034px 0px; }
+
+.selected li input {
+	width: 62px;
+	height: 25px;
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 10px auto;
+	text-align: right;
+	border-radius: 5px;
+	border: 1px solid #776c56;
+	background: #d9ceb2;
+}
+.selected li input:focus {
+	outline: none;
+}
+.selected li input[type="checkbox"] {
+	opacity: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+.selected li .check-label {
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: 12px auto;
+	background: url(../images/checkbox.png) no-repeat;
+	cursor: pointer;
+}
+.selected li input[type="checkbox"]:checked + .check-label {
+	background-position: -21px 0px;
+}
+.dr-tr {
+	width: 62px;
+	height: 25px;
+	position: relative;
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 10px auto;
+	padding-left: 3px;
+	line-height: 22px;
+	border-radius: 5px;
+	border: 1px solid #776c56;
+	background: #d9ceb2 url(../images/select-arrow.png) 40px center no-repeat;
+	cursor: pointer;
+}
+.bor-rad {
+	border-radius: 5px 5px 0 0;
+}
+.dr-tr.big-tr {
+	width: 255px;
+	margin: 4px auto;
+	text-align: right;
+	color: #155f63;
+	padding-right: 30px;
+	font-style: italic;
+	background: #d9ceb2 url(../images/select-arrow-blue.png) 230px center no-repeat;
+}
+.dropdown {
+	position: absolute;
+		bottom: -88px;
+		left: 5px;
+		z-index: 110;
+	margin: 0;
+	padding: 0;
+	display: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #776c56;
+	background: #d9ceb2;
+}
+.dropdown.visible {
+	display: block;
+}
+.dropdown.small {
+	width: 40px;
+}
+.dropdown.small li {
+	width: 40px;
+	background: none;
+}
+.dr-tr.small {
+	width: 40px;
+	margin: 3px 0 0 5px;
+	float: left;
+	background-position: 20px center;
+}
+.dropdown li {
+	width: 56px;
+	height: 24px;
+	display: block;
+	float: none;
+	background: none !important;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.selected.nobckg li.drop-holder {
+	width: 255px;
+	background: none;
+}
+.dropdown.bigger {
+	width: 254px;
+		top: 23px;
+		left: 0px;
+		bottom: none;
+}
+.dropdown.bigger li {
+	padding-right: 15px;
+	width: 255px;
+}
+.drop-label {
+	font-size: 14px;
+	font-weight: bold;
+	color: #554e3d;
+}
+
+.red-cross {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+		top: -5px;
+		right: -5px;
+		z-index: 100;
+	display: none;
+	background: url(../images/red-cross.png) center no-repeat;
+	cursor: pointer;
+}
+.defenders .selected li.spearman,
+.defenders .selected li.archer,
+.defenders .selected li.swordsman,
+.defenders .selected li.light-cav,
+.defenders .selected li.ram,
+.defenders .selected li.sup-wagon,
+.defenders .selected li.heavy-spearman,
+.defenders .selected li.heavy-archer,
+.defenders .selected li.heavy-swordsman,
+.defenders .selected li.heavy-cav,
+.defenders .selected li.catapult,
+.defenders .selected li.ballista,
+.defenders .selected li.phalanx,
+.defenders .selected li.elite-archer,
+.defenders .selected li.guardian ,
+.defenders .selected li.paladin,
+.defenders .selected li.trebuchet {
+	width: 79px;
+	margin: 3px -2px;
+}
+.defenders .fort-arrow {
+	width: 13px;
+	height: 60px;
+	position: absolute;
+		top: 5px;
+		right: 5px;
+	display: block;
+	background: url(../images/fort-arrow.png) center no-repeat;
+	cursor: pointer;
+}
+.defenders .fort-arrow.shrink {
+	width: 27px;
+		right: -12px;
+		z-index: 80;
+	background: url(../images/fort-arrow-left.png) center no-repeat;
+}
+ .defenders .selected li.fort-left {
+	margin-right: 71px;
+	overflow: visible;
+}
+ .defenders .selected li.fort-right {
+	margin-left: -71px;
+}
+.defenders .selected li.fort-left .red-cross {
+	right: -80px;
+}
+.defenders .selected .fort-right .warrior { background-position: -980px 0; }
+
+.cont.gen {
+	width: 470px;
+	position: absolute;
+		top: -40px;
+		left: 90px;
+		z-index: 300;
+	box-shadow: none;
+	background: url(../images/cont-bckg-over.png) center 40px no-repeat, url(../images/cont-bckg-pattern.jpg) repeat;
+}
+.cont.gen:before {
+	content: "";
+	width: 20px;
+	height: 30px;
+	position: absolute;
+		top: 60px;
+		left: -19px;
+	display: block;
+	background: url(../images/gen-holder-tri.png);
+}
+.general {
+	width: 76px;
+	height: 76px;
+	position: relative;
+	margin: 25px auto;
+}
+.gen-cont-tr {
+	width: 34px;
+	height: 36px;
+	position: absolute;
+		top: -8px;
+		right: -8px;
+	background: url(../images/change-gen.png) no-repeat;
+	cursor: pointer;
+}
+.gen-image {
+	width: 76px;
+	height: 76px;
+	background: url(../images/gr-ppl.png) 0px 0px no-repeat;
+}
+.gen-flag {
+	width: 32px;
+	height: 42px;
+	position: absolute;
+		left: -10px;
+		bottom: -20px;
+	padding-top: 3px;
+	font-size: 20px;
+	color: #f5f5f5;
+	background: url(../images/flag.png) no-repeat;
+}
+.general .gen-flag {
+	padding-top: 7px;
+	font-size: 17px;
+}
+.pop-up {
+	position: absolute;
+		top: -60px;
+		left: -15px;
+		z-index: 150;
+	display: none;
+	padding: 10px 15px;
+	font-size: 12px;
+	white-space: nowrap;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+	border-radius: 3px;
+	color: #8a693a;
+	background: #f2cf66;
+}
+.pop-up:before {
+	content: "";
+	width: 27px;
+	height: 15px;
+	position: absolute;	
+		left: 20px;
+		bottom: -13px;
+	background: url(../images/pop-up-arrow.png) no-repeat;
+}
+.dr-tr:hover > .pop-up {
+	display: block;
+}
+.gear {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	float: left;
+	margin-top: 1px;
+	background: url(../images/gear.png) center no-repeat;
+	cursor: pointer;
+}
+.pop-up-big.visible {
+	display: block;
+}
+.pop-up-big {
+	min-width: 235px;
+	min-height: 60px;
+	position: absolute;
+		top: -20px;
+		left: 30px;
+		z-index: 130;
+	display: none;
+	padding: 0;
+	border: 1px solid #f2d06c;
+	background: #f2d787;
+}
+.pop-up-big:before {
+	content: "";
+	width: 10px;
+	height: 23px;
+	position: absolute;
+		top: 20px;	
+		left: -10px;
+	background: url(../images/pop-up-big.png) no-repeat;
+}
+.pop-title {
+	padding: 10px 0px 10px 34px;
+	background: #d09e58 url(../images/plus.jpg) 12px 10px no-repeat;
+	font-family: Arial;
+}
+.selected li .pop-up-big input {
+	width: 18px;
+	height: 18px;
+	display: block;
+	float: left;
+	margin: 6px 10px;
+}
+.pop-up-big label {
+	display: block;
+	float: left;
+	margin: 6px 0;
+	padding-left: 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #8a693a;
+	border-left: 1px solid #e1b65f;
+}

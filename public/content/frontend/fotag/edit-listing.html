@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOTAG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="fonts/open-sans/open-sans.css">
+	<link rel="stylesheet" href="fonts/font-awesome/font-awesome.css">
+	<link rel="stylesheet" href="fonts/centennial/centennial.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<header>
+		<div class="container clearfix">
+			<a href="#" class="main-logo">FOTAG</a>
+			<nav class="desktop-menu">
+				<ul class="main-menu">
+					<li><a href="index.html" class="active"><i class="icon"></i> My Listings</a></li>
+					<li><a href="my-learning-center.html"><i class="icon"></i> My Learning Center</a></li>
+				</ul>
+				<ul class="account-menu">
+					<li><a href="my-account.html"><i class="icon"></i> My Account</a></li>
+					<li>
+						<a href="#" class="logoff" onclick="return false;" data-dropdown-trigger><i class="icon"></i> Log off</a>
+						<ul class="dropdown">
+							<li><a href="#">Profile Settings</a></li>
+							<li><a href="#">Billing Information</a></li>
+							<li><a href="#">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="mobile-menu">
+				<a href="#" class="trigger" onclick="return false;" data-dropdown-trigger><i class="icon"></i></a>
+				<ul class="dropdown">
+					<li><a href="#"><i class="icon"></i> My Listings</a></li>
+					<li><a href="#"><i class="icon"></i> My Numbers</a></li>
+					<li><a href="my-account.html" class="settings"><i class="icon"></i> My Account</a></li>
+					<li><a href="#" class="logoff"><i class="icon"></i> Log off</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="content">
+		
+		<div class="container">
+			<div class="content-heading clearfix" >
+				<h1 class="col-lg-2 col-md-2 col-sm-2 ol-xs-12">Edit Listing</h1>
+
+				<a href="#" class="btn orange" onclick="return false;" data-open-modal="create-listing">Preview listing</a>
+				<a href="index.html" class="btn gray">Go back</a>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<h3>Listing photography</h3>
+					<div class="upload-listing-photo-heading clearfix">
+						<div class="photo-count">
+							12 photos
+						</div>
+						<a href="#" class="btn purple" onclick="return false;" data-open-upload-field>Upload Photos</a>
+						<div class="upload-photo-field">
+							<a href="#" onclick="return false;" class="modal-close" data-close-upload-field></a>
+							<i class="icon"></i>
+							<p>
+								Drag and drop your photos here <br>
+								or <br>
+								<a href="#">browse your computer to upload photos.</a>
+							</p>
+						</div>
+					</div>
+					<ul class="listing-photos row">
+						<li class="listing-photo photo-cover col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo1.jpg" alt="">
+							<a href="#"><i class="icon"></i> Download</a>
+							<input type="text" class="photo-caption" placeholder="Click to add caption">
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo2.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Some windows">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo3.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Wardrobe">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo4.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Kitchen 1">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo photo-inactive col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo5.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Kitchen 2">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo6.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo7.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="The bedroom">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo8.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Secret door">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo9.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Bathroomo">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo10.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Shower">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo11.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Bed and Winodws">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+						<li class="listing-photo  col-lg-4 col-md-4 col-sm-4 col-xs-6">
+							<img src="images/listing-photo12.jpg" alt="">
+							<input type="text" class="photo-caption" placeholder="Click to add caption" value="Chair">
+							<div class="photo-options">
+								<p>Reorder photos with drag and drop</p>
+								<div class="handle"></div>
+								<a href="#" class="disable" onclick="return false;" data-disable-img></a>
+								<a href="#" class="delete" onclick="return false;"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ls-information">
+					<h3>Listing Information</h3>
+					<div class="rounded clearfix">
+						<form action="">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="input-holder clearfix">
+									<label for="street">Street:</label>
+									<input type="text" id="street" value="626 Oak Street">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="state">State:</label>
+									<input type="text" id="state" value="TS">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="status">Status:</label>
+									<div class="select-holder">
+										<select name="status" id="status">
+											<option value="active">Active (Still for sale)</option>
+											<option value="active">Active (Still for sale)</option>
+											<option value="active">Active (Still for sale)</option>
+											<option value="active">Active (Still for sale)</option>
+											<option value="active">Active (Still for sale)</option>
+										</select>	
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="input-holder clearfix">
+									<label for="city">City:</label>
+									<input type="text" id="city" value="626 Oak Street">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="zip">Zip:</label>
+									<input type="text" id="zip" value="TS">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="mls">MLS #:</label>
+									<input type="text" id="mls" value="12345678">
+								</div>
+							</div>
+						</form>
+						<p class="hint-info">Click on a field to edit it.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<h3>Active theme</h3>
+					<div class="rounded clearfix theme">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 preview-theme">
+							<img src="images/providence-light.png" alt="">
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<h4>Providence Light</h4>
+							<p>Simple & Beautiful way to showcase your photos in front of buyers.</p>
+							<a href="#" onclick="return false;" class="btn purple" data-open-modal="change-theme">Change Theme</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<h3>Market me details</h3>
+					<div class="rounded clearfix">
+						<form action="">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input-holder">
+								<b>About me:</b>
+								<textarea class="full-width">Hi I’m Jessica Young and I love my job. I’ve helped the owners price it professionally with accurate market data and I understand this neighborhood and this community very well. Last year I sold two other houses in the neighborhood so I am well versed in its nuances, its HOA documents and its unique community flavor. I have had a 5 star Seller and Buyer Satisfaction Rating each of the last 6 years. I am certified as a relocation expert with my firm and am completely up to date with the new NC purchase
+								</textarea>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<b>Banner 1:</b>
+								<div class="input-holder clearfix">
+									<label for="tagline">Tagline:</label>
+									<input type="text" id="tagline" value="Advertisers Tagline">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="c2a">C2A:</label>
+									<input type="text" id="c2a" value="Vendor's Name">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="link">Link:</label>
+									<input type="text" id="link" value="http://myagencywebsite.com">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<b>Banner 2:</b>
+								<div class="input-holder clearfix">
+									<label for="tagline">Tagline:</label>
+									<input type="text" id="tagline" value="Advertisers Tagline">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="c2a">C2A:</label>
+									<input type="text" id="c2a" value="Vendor's Name">
+								</div>
+								<div class="input-holder clearfix">
+									<label for="link">Link:</label>
+									<input type="text" id="link" value="http://myagencywebsite.com">
+								</div>
+							</div>
+						</form>
+						<p class="clearf hint-info">Click on a field to edit it.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="message-box copy">
+		<i class="icon message-icon"></i>
+		<p>
+			The link of <span></span>
+			has been copied to your clipboard
+		</p>
+	</div>
+
+	<div class="modals-holder">
+		<div class="whiten" data-close-modal></div>
+
+		<div class="modal crop-photo">
+			<div class="modal-heading clearfix">
+				<h3>Edit photo</h3>
+				<a href="#" onclick="return false;" data-close-modal><i class="modal-close"></i></a>
+			</div>
+			<div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+					<h3>Select area to crop</h3>
+					<div class="air-30-30">
+						CROP TOOL
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					<h3>Crop preview</h3>
+					<div class="air-30-30">
+						CROP PREVIEW 
+					</div>
+					<h3>Photo caption</h3>
+					<form action="">
+						<div class="input-holder">
+							<label for="caption">Caption: </label>
+							<input type="text" id="caption">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal huge change-theme">
+			<div class="modal-heading clearfix">
+				<h3>Change theme</h3>
+				<a href="#" onclick="return false;" data-close-modal><i class="modal-close"></i></a>
+			</div>
+			<div class="row">
+				<ul class="themes">
+					<li>
+						<a href="#"><img src="images/changeto-providence-light.png" alt=""><h2>Seatle</h2></a>
+					</li>
+					<li class="selected-theme">
+						<a href="#"><img src="images/changeto-providence-light.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="images/changeto-providence-light.png" alt=""><h2>Providence dark</h2></a>
+					</li>
+				</ul>
+				<h1>Providence Light</h1>
+				<p>Simple & Beautiful way to showcase your photos in front of buyers</p>
+				<a href="#" onclick="return false;" class="slide-themes left icon fa-angle-left"></a>
+				<a href="#" onclick="return false;" class="slide-themes right icon fa-angle-right"></a>
+				
+				<a href="#" class="btn big purple dib">Select Theme</a>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="container clearfix">
+			<ul class="foot-menu">
+				<li><a href="#">MY LEARNING CENTER</a></li>
+				<li><a href="#">CUSTOMER SUPPORT</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACTS</a></li>
+				<li><a href="#">TERMS & CONDITIONS</a></li>
+			</ul>
+			<div class="credits">
+				<img src="images/foot-logo.png" class="foot-logo" alt="FOTAG">
+				<p>© 2015 FOTAG LLC</p>
+			</div>                   
+			<div class="clearf"></div>
+		</div>
+	</footer>
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOTAG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="fonts/open-sans/open-sans.css">
+	<link rel="stylesheet" href="fonts/font-awesome/font-awesome.css">
+	<link rel="stylesheet" href="fonts/centennial/centennial.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<div class="container clearfix">
+			<a href="#" class="main-logo">FOTAG</a>
+			<nav class="desktop-menu">
+				<ul class="main-menu">
+					<li><a href="agency-admins.html" class="active"><i class="icon"></i> My Agents</a></li>
+					<li><a href="index.html"><i class="icon"></i> My Listings</a></li>
+					<li><a href="my-learning-center.html"><i class="icon"></i> My Learning Center</a></li>
+				</ul>
+				<ul class="account-menu">
+					<li><a href="my-account.html"><i class="icon"></i> My Account</a></li>
+					<li>
+						<a href="#" class="logoff" onclick="return false;" data-dropdown-trigger><i class="icon"></i> Log off</a>
+						<ul class="dropdown">
+							<li><a href="#">Profile Settings</a></li>
+							<li><a href="#">Billing Information</a></li>
+							<li><a href="#">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<nav class="mobile-menu">
+				<a href="#" class="trigger" onclick="return false;" data-dropdown-trigger><i class="icon"></i></a>
+				<ul class="dropdown">
+					<li><a href="agency-admins.html" class="active"><i class="icon"></i> My Agents</a></li>
+					<li><a href="#"><i class="icon"></i> My Listings</a></li>
+					<li><a href="#"><i class="icon"></i> My Learning Center</a></li>
+					<li><a href="my-account.html" class="settings"><i class="icon"></i> My Account</a></li>
+					<li><a href="#" class="logoff"><i class="icon"></i> Log off</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="content">
+		
+		<div class="container">
+			<div class="content-heading clearfix" >
+				<h1 class="col-lg-2 col-md-2 col-sm-2 col-xs-12">My Agents</h1>
+				<form action="">
+					<div class="search-holder">
+						<input type="text" class="search-bar" placeholder="Search agents by name">
+						<input type="submit" class="search-btn" value="">
+					</div>
+				</form>
+				<a href="#" onclick="return false;" class="btn orange" data-open-modal="create-new-agent">Create new agent</a>
+			</div>
+			<ul class="agency-admins row">
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<img src="images/agent-avatar.jpg" alt="">
+					<div><span>Operate as</span> Jessica Young</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="push"></div>
+	</div>
+	
+	<footer>
+		<div class="container clearfix">
+			<ul class="foot-menu">
+				<li><a href="#">MY LEARNING CENTER</a></li>
+				<li><a href="#">CUSTOMER SUPPORT</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACTS</a></li>
+				<li><a href="#">TERMS & CONDITIONS</a></li>
+			</ul>
+			<div class="credits">
+				<img src="images/foot-logo.png" class="foot-logo" alt="FOTAG">
+				<p>© 2015 FOTAG LLC</p>
+			</div>                   
+			<div class="clearf"></div>
+		</div>
+	</footer>
+
+	<div class="message-box copy">
+		<i class="icon message-icon"></i>
+		<p>
+			The link of <span></span>
+			has been copied to your clipboard
+		</p>
+	</div>
+
+	<div class="modals-holder">
+		<div class="whiten" data-close-modal></div>
+
+		<div class="modal contact-support">
+			<div class="modal-heading clearfix">
+				<h3>Contact customer Support</h3>
+				<a href="#" onclick="return false;" class="modal-close" data-close-modal></a>
+			</div>
+			<div class="air-20">
+				<span class="fz16 fw300">Describe the problem you are experiencing:</span>
+				<textarea></textarea>
+				<div class="tac">
+					<div class="fz12 fw300 air-10">We will respond to your account email as soon as possible!</div>
+					<a href="#" class="btn orange big dib">Send</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

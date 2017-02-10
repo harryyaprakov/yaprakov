@@ -1,0 +1,430 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family:  Georgia, "Palatino Linotype", "Book Antiqua", "Times New Roman" serif;
+}
+body {
+	background: url(../images/bckg.jpg) center 0px fixed;
+}
+.clearfix:after {
+   content: ""; 
+   height: 0;
+   visibility: hidden;
+   display: block;
+   clear: both;
+}
+.cont {
+	width: 970px;
+	margin: 40px auto;
+	display: none;
+	border-radius: 6px;
+	box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+	background: #3c3428;
+}
+.cont-main {
+	height: 970px;
+	padding: 0 0 160px 0;
+	border-radius: 6px;
+	background-color: #ccbea1;
+	border: 1px solid #e8d4ac;
+	background: url(../images/cont-bckg-over.png) center 10px no-repeat, url(../images/cont-bckg-foot.png) bottom center no-repeat, url(../images/cont-bckg-pattern.jpg) repeat;
+}
+.cont.visible {
+	display: block;
+}
+.cont-head {
+	height: 32px;
+	margin: 0;
+	padding: 4px 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 6px 6px 0 0;
+	border: 1px solid #8b3e27;
+	border-bottom: none;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	background: url(../images/cont-head.jpg); 
+}
+.tabs {
+	height: 30px;
+	margin: 6px 0 0 0;
+	padding: 0 10px;
+	list-style: none;
+	background: #3c3428;
+}
+.tabs li {
+	float: left;
+	display: block;
+}
+.tabs li a {
+	position: relative;
+	display: block;
+	margin: 0 2px;
+	padding: 0px 25px 0px 45px;
+	font-size: 14px;
+	line-height: 30px;
+	text-decoration: none;
+	border-radius: 5px 5px 0 0;
+	color: #c7ae8d;
+	background: url(../images/tab-btn.jpg) repeat-x;
+}
+.tabs li a:hover {
+	background: #534431;
+}
+.tabs li a.active {
+	margin-bottom: -1px;
+	border: 1px solid #e8d4ac;
+	border-bottom: none;
+	color: #474336;
+	background: url(../images/cont-bckg-pattern.jpg) repeat;
+}
+.tabs li a.active div {
+	background-image: url(../images/tab-icons-active.png);
+}
+.tabs li a div {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+		top: 2px;
+		left: 15px;
+	background: url(../images/tabs-pict.png) no-repeat;
+}
+#fam-tab-tr div { background-position: 0px 0px; }
+#gov-tab-tr div { background-position: 0px -30px; }
+#gen-tab-tr div { background-position: 0px -65px; }
+#mar-tab-tr div { background-position: 0px -97px; }
+#arch-tab-tr div { background-position: 0px -126px; }
+
+.tab {
+	display: none;
+}
+.tab.visible {
+	display: block;
+}
+.head-icon {
+	width: 22px;
+	height: 22px;
+	display: block;
+	background: url(../images/icons.png);
+	cursor: pointer;
+}
+.head-icon.info {
+	float: left;
+}
+.head-icon.close {
+	float: right;
+	background-position: 31px -26px; 
+}
+.head-icon.close:hover {
+	background-position: -2px -26px; 
+}
+.cont-head .head-title {
+	height: 20px;
+	display: inline-block;
+	position: relative;
+	padding: 0 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #c7ae8d;
+	background: url(../images/head-title.png) repeat-x;
+}
+.cont-head .head-title:before, 
+.cont-head .head-title:after {
+	content: "";
+	width: 16px;
+	height: 21px;
+	position: absolute;
+		top: -2px;
+	display: block;
+	background: url(../images/icons.png) -24px 0px no-repeat;
+}
+.cont-head .head-title:before {
+		left: -9px;
+}
+.cont-head .head-title:after {
+		right: -12px;
+	background-position: -42px 0px;
+}
+.btn {
+	width: 22px;
+	height: 22px;
+	position: relative;
+	display: block;
+	margin: 12px 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 6px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.74);
+	box-shadow: 0px 0px 1px 3px rgba(122, 90, 71, 0.2);
+	color: #f1ecdc;
+	background: url(../images/btn-bckg.jpg) repeat-x;
+	border: 1px solid #59453a;
+	cursor: pointer;
+}
+.btn:hover {
+	background: url(../images/btn-bckg-hover.jpg) repeat-x;
+}
+.mar-top {
+	margin-top: 65px;
+}
+.btn:before, 
+.btn:after {
+	content: "";
+	width: 4px;
+	height: 3px;
+	position: absolute;	
+		top: 1px;
+	background: url(../images/btn-inner-shadow.png) left;
+}
+.btn:before {
+	left: 0;
+}
+.btn:after {
+	right: 1px;
+	background-position: 5px 0;
+}
+.btn .btn-icon {
+	width: 22px;
+	height: 22px;
+	background: url(../images/btn-icons.png) no-repeat;
+}
+.family-tree-header {
+	height: 208px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 0px 0px 80px;
+	font-size: 30px;
+	color: #4d402f;
+	background: url(../images/family-tree-header.png) center top no-repeat;
+}
+.emperor {
+	width: 176px;
+	height: 178px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 38px 0px 0px 50px;
+	background: url(../images/kingNqueen.png) left no-repeat;
+}
+.empress {
+	width: 134px;
+	height: 134px;
+	margin: 32px 0 0 20px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 7px 0px 0px 8px;
+	background: url(../images/kingNqueen.png) right -34px no-repeat;
+}
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+.family-tree-logo {
+	width: 230px;
+	margin-top: 50px;
+	line-height: 22px;
+	text-align: center;
+}
+.family-tree-logo b {
+	text-transform: uppercase;
+}
+.family-tree-logo .tree {
+	font-variant: small-caps;
+}
+.broken {
+	margin: 45px 0px 0px 150px;
+	font-weight: bold;
+	padding-right: 35px;
+	background: url(../images/broken.png) right no-repeat;
+}
+
+.tree {
+	list-style: none;
+	margin: 30px auto 0 auto;
+	padding: 0;
+}
+.couple {
+	position: relative;
+	width: 220px;
+	height: 140px;
+	margin-bottom: 20px;  
+}
+.couple:first-child {
+	margin-left: 70px;
+}
+.couple:nth-child(5) {
+	margin-left: 7px;
+}
+.couple:nth-child(13) {
+	margin-left: 7px;
+}
+.person {
+	position: absolute;
+		top: 0px;
+		left: 0px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+	background: #e6e6e6; /* Old browsers */
+	background: -moz-linear-gradient(top, #e6e6e6 0%, #808694 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e6e6), color-stop(100%,#808694)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e6e6e6 0%,#808694 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e6e6e6 0%,#808694 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e6e6e6 0%,#808694 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #e6e6e6 0%,#808694 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#808694',GradientType=0 ); /* IE6-9 */
+}
+.person img {
+	border-radius: 5px;
+}
+.person.empty {
+	box-shadow: none;
+	opacity: 0.5;
+	background: #a1957b;
+}
+.person.front {
+		z-index: 2;
+	padding: 3px 3px 0 3px;
+}
+.person.front img {
+	width: 94px;
+	height: 94px;
+		z-index: 2;
+}
+.person.back {
+		top: 35px;
+		left: 90px;
+		z-index: 1;
+	padding: 2px 2px 0 2px;
+}
+.person.back img {
+	width: 78px;
+	height: 78px;
+		z-index: 1;	
+}
+.second-gen.couple {
+	width: 120px;
+	height: 90px;
+	margin-top: 15px;  
+	margin-bottom: 15px;  
+}
+.second-gen.couple .person.back {
+		top: 20px;
+		left: 55px;
+		z-index: 1;
+	padding: 2px 2px 0 2px;
+}
+.second-gen.couple .person.front img {
+	width: 60px;
+	height: 60px;
+}
+.second-gen.couple .person.back img {
+	width: 52px;
+	height: 52px;
+}
+.tree-btn {
+	width: 36px;
+	height: 36px;
+	position: absolute;
+		top: -14px;
+		right: -14px;
+		z-index: 3;
+	background: url(../images/flags-n-btns.png) 0px 0px no-repeat;
+	cursor: pointer;
+}
+.marry-btn:hover {
+	background-position: -38px 0px; 
+}
+.add-to-court-btn {
+	background-position: 0px -38px;
+}
+.add-to-court-btn:hover {
+	background-position: -38px -38px;
+}
+.cancel-btn {
+	background-position: 0px -75px;
+}
+.cancel-btn:hover {
+	background-position: -38px -75px;
+}
+.person .rank {
+	width: 30px;
+	height: 23px;
+	position: absolute;
+		z-index: 4;
+	background: url(../images/gov.png) no-repeat;
+}
+.person.front .rank {
+		top: 3px;
+		left: 3px;
+	background-position: -205px -5px;
+}
+.person.back .rank {
+		bottom: 2px;
+		right: 2px;
+	background-position: -173px -5px;
+}
+.rank .rank-icon {
+	width: 22px;
+	height: 19px;
+	background: url(../images/gov.png) no-repeat;
+}
+.rank.gen .rank-icon {
+	margin: 1px 0 0 3px;
+	background-position: 0px -31px;
+}
+.rank.gov .rank-icon {
+	margin: 1px 0 0 1px;
+	background-position: -28px -31px;
+}
+.rank.both .rank-icon {
+	background-position: -60px -31px;
+}
+.person.back .rank .rank-icon {
+	margin: 4px 0 0 6px;
+}
+
+.tree-line-separator {
+	width: 824px;
+	height: 2px;
+	margin: 0 auto;
+	background: url(../images/tree-line.png) no-repeat;
+}
+.not-family {
+	width: 860px;
+	margin: 30px auto;
+	text-align: center;
+	word-spacing: 10px;
+}
+.pending {
+	display: inline-block;
+	padding: 0 2px;
+	border-radius: 5px;
+	background: rgba(42, 40, 32, 0.33);
+} 
+.not-family .person {
+	position: relative;
+	margin: 10px;
+	padding: 2px 2px 0 2px;
+	float: left;
+}
+.not-family .person img {
+	width: 54px;
+	height: 54px;
+}
+.court {
+	width: 323px;
+	height: 168px;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0px 0px -85px 0px;
+	padding: 15px 0px 0px 13px;
+	background: url(../images/court-bckg.png) no-repeat;
+}
+.court .person {
+	margin: 8px;
+}
